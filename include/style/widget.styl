@@ -13,7 +13,8 @@
             .level-left, .level-right
                 align-items: flex-start
             
-            .level-item:has(mjx-container)
+            // fix MathJax render issue
+            .level-item:has(.MathJax)
                 display: block
 
         .tag
@@ -29,6 +30,7 @@
             background: $light-grey
             color: $white-invert
 
+        // fix MathJax render issue
         .tag
             mjx-container
                 mjx-assistive-mml
@@ -39,6 +41,11 @@
 
 .level.is-multiline
     flex-wrap: wrap
+
+// fix MathJax render issue
+.breadcrumb
+    a
+        display: block
 
 /* ---------------------------------
  *      Table of Content Widget
@@ -74,3 +81,4 @@
     .widget.card#toc, #toc-mask
         &.is-active
             display: block
+            
